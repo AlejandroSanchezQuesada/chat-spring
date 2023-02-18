@@ -5,9 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class TextMessageDTO {
 
-    private String message;
+	private String userName;
+	private String message;
+
+	public String messageWithUserName() {
+		return userName + message;
+	}
+
 }
