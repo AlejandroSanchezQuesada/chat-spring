@@ -15,7 +15,8 @@ public class CorsConfig {
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:8085"));
+		config.setAllowedOrigins(
+				Arrays.asList("http://localhost:3000", "http://localhost:8085", "http://192.168.18.15:3000"));
 		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
 		config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
 		config.setAllowCredentials(true); // Habilitar credenciales
